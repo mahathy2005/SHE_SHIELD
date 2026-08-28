@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+
+    app:strokeColor="#F4C5D7"
+    app:strokeWidth="1dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- ===================================================== -->
+        <!-- TOP ROW -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <!-- ================================================= -->
+            <!-- CATEGORY ICON -->
+            <!-- ================================================= -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                app:cardBackgroundColor="#FCE4EC"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/ivPlaceIcon"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:contentDescription="Safe place category"
+
+                    android:padding="12dp"
+
+                    android:src="@android:drawable/ic_menu_mylocation"
+
+                    app:tint="#E91E63" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================================================= -->
+            <!-- NAME + DISTANCE -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvPlaceName"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:ellipsize="end"
+
+                    android:maxLines="2"
+
+                    android:text="City Police Station"
+
+                    android:textColor="#261B2F"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvDistance"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="3dp"
+
+                    android:text="500 m away"
+
+                    android:textColor="#E91E63"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- CATEGORY BADGE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/tvCategoryBadge"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_safe_zone_badge"
+
+                android:gravity="center"
+
+                android:maxWidth="90dp"
+
+                android:paddingStart="9dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="5dp"
+
+                android:text="POLICE"
+
+                android:textColor="#C2185B"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- ADDRESS -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="13dp"
+
+            android:gravity="top"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+
+                android:contentDescription="Address"
+
+                android:src="@android:drawable/ic_menu_mapmode"
+
+                app:tint="#8E7080" />
+
+
+            <TextView
+                android:id="@+id/tvPlaceAddress"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="7dp"
+
+                android:layout_weight="1"
+
+                android:ellipsize="end"
+
+                android:maxLines="3"
+
+                android:text="Address unavailable"
+
+                android:textColor="#6F6470"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- DIVIDER -->
+        <!-- ===================================================== -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+
+            android:background="#F3E5EB" />
+
+
+        <!-- ===================================================== -->
+        <!-- ACTION BUTTONS -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+
+            <!-- ================================================= -->
+            <!-- CALL -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCallPlace"
+
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+
+                android:layout_weight="1"
+
+                android:minHeight="0dp"
+
+                android:text="Call"
+                android:textAllCaps="false"
+                android:textColor="#C2185B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                app:backgroundTint="#FCE4EC"
+
+                app:cornerRadius="22dp"
+
+                app:icon="@android:drawable/ic_menu_call"
+                app:iconTint="#C2185B" />
+
+
+            <!-- ================================================= -->
+            <!-- SPACE -->
+            <!-- ================================================= -->
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp" />
+
+
+            <!-- ================================================= -->
+            <!-- DIRECTIONS -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNavigate"
+
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+
+                android:layout_weight="1"
+
+                android:minHeight="0dp"
+
+                android:text="Directions"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                app:backgroundTint="#E91E63"
+
+                app:cornerRadius="22dp"
+
+                app:icon="@android:drawable/ic_menu_directions"
+                app:iconTint="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

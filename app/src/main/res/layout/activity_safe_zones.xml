@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#FFF8FB">
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER -->
+    <!-- ========================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:cardBackgroundColor="#FCE4EC"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="20dp"
+            android:paddingTop="22dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="18dp">
+
+
+            <!-- ================================================= -->
+            <!-- TITLE ROW -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvHeaderTitle"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Nearby Safe Zones"
+
+                        android:textColor="#2D1552"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvResultCount"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="4dp"
+
+                        android:text="Finding safe places..."
+
+                        android:textColor="#73556B"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <!-- ================================================= -->
+                <!-- REFRESH -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRefreshLocation"
+
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+
+                    android:contentDescription="Refresh nearby safe places"
+
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+
+                    app:backgroundTint="#E91E63"
+                    app:cornerRadius="24dp"
+
+                    app:icon="@android:drawable/ic_popup_sync"
+                    app:iconTint="#FFFFFF" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- LOCATION -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:contentDescription="Current location"
+
+                    android:src="@android:drawable/ic_menu_mylocation"
+
+                    app:tint="#E91E63" />
+
+
+                <TextView
+                    android:id="@+id/tvCurrentLocation"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="8dp"
+
+                    android:layout_weight="1"
+
+                    android:ellipsize="end"
+                    android:maxLines="2"
+
+                    android:text="Finding your location..."
+
+                    android:textColor="#5E4B5A"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- DATA SOURCE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="5dp"
+
+                android:text="Nearby places • OpenStreetMap"
+
+                android:textColor="#8E7080"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ========================================================= -->
+    <!-- FILTERS -->
+    <!-- ========================================================= -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:clipToPadding="false"
+
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="8dp"
+
+        android:scrollbars="none">
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupFilters"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:singleLine="true"
+            app:singleSelection="false">
+
+
+            <!-- ================================================= -->
+            <!-- ALL -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:checked="true"
+
+                android:text="All Safe Places"
+
+                app:checkedIconVisible="false"
+
+                app:chipBackgroundColor="@color/safe_zone_chip_background" />
+
+
+            <!-- ================================================= -->
+            <!-- POLICE -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPolice"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Police"
+
+                app:checkedIconVisible="false" />
+
+
+            <!-- ================================================= -->
+            <!-- HOSPITALS -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHospitals"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Hospitals"
+
+                app:checkedIconVisible="false" />
+
+
+            <!-- ================================================= -->
+            <!-- CROWDED -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCrowded"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Crowded Places"
+
+                app:checkedIconVisible="false" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+
+    <!-- ========================================================= -->
+    <!-- SAFE ZONE LIST -->
+    <!-- ========================================================= -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1">
+
+
+        <!-- ===================================================== -->
+        <!-- RECYCLER VIEW -->
+        <!-- ===================================================== -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSafeZones"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:clipToPadding="false"
+
+            android:overScrollMode="ifContentScrolls"
+
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="24dp"
+
+            tools:listitem="@layout/item_safe_zone" />
+
+
+        <!-- ===================================================== -->
+        <!-- LOADING -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

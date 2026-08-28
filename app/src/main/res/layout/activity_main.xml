@@ -1,0 +1,1151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_pink_pattern"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+    <!-- ========================================================= -->
+    <!-- MAIN SCROLLABLE SCREEN -->
+    <!-- ========================================================= -->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_main_pink_pattern"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_main_pink_pattern"
+            android:paddingBottom="28dp">
+
+
+            <!-- ================================================= -->
+            <!-- HEADER SECTION - UNCHANGED -->
+            <!-- ================================================= -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headerSection"
+                android:layout_width="0dp"
+                android:layout_height="95dp"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- MENU -->
+
+                <ImageButton
+                    android:id="@+id/imageView6"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_main_pink_pattern"
+                    android:contentDescription="Open Menu"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#555555" />
+
+                <!-- LOGO -->
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="209dp"
+                    android:layout_height="71dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/screenshot_2026_08_19_102401" />
+
+                <!-- IMAGE -->
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="62dp"
+                    android:layout_height="66dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="52dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/screenshot_2026_08_19_103113" />
+
+                <!-- NOTIFICATION -->
+
+                <ImageButton
+                    android:id="@+id/btnNotifications"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_main_pink_pattern"
+                    android:contentDescription="Notifications"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_notifications"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- ===================================================== -->
+            <!-- SOFT PINK BACKGROUND PATTERNS -->
+            <!-- ===================================================== -->
+
+            <View
+                android:id="@+id/bgBlobTopRight"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="-70dp"
+                android:alpha="0.55"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+            <View
+                android:id="@+id/bgBlobSosLeft"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_marginStart="-75dp"
+                android:layout_marginTop="75dp"
+                android:alpha="0.55"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+            <View
+                android:id="@+id/bgRingTop"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="15dp"
+                android:alpha="0.45"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+            <View
+                android:id="@+id/bgDot1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="25dp"
+                android:alpha="0.45"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+            <View
+                android:id="@+id/bgDot2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="43dp"
+                android:alpha="0.40"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+            <View
+                android:id="@+id/bgDot3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="85dp"
+                android:layout_marginTop="68dp"
+                android:alpha="0.30"
+                android:background="@drawable/bg_white_pink_illusion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+
+            <!-- ===================================================== -->
+            <!-- GREETING -->
+            <!-- ===================================================== -->
+
+            <TextView
+                android:id="@+id/tvUserGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="Hello, User! 👋"
+                android:textColor="#1F1347"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerSection" />
+
+            <TextView
+                android:id="@+id/tvUserSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="You are protected. We are with you."
+                android:textColor="#5C5776"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUserGreeting" />
+
+            <ProgressBar
+                android:id="@+id/longPressProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUserSubtitle" />
+
+
+            <!-- ===================================================== -->
+            <!-- SOS CARD -->
+            <!-- ===================================================== -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sosCardContainer"
+                android:layout_width="0dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUserSubtitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white_pink_gradient"
+                    android:padding="8dp">
+
+                    <View
+                        android:id="@+id/pulseCircle1"
+                        android:layout_width="108dp"
+                        android:layout_height="108dp"
+                        android:alpha="0.45"
+                        android:background="@drawable/bg_sos_illusion_circle1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/pulseCircle2"
+                        android:layout_width="102dp"
+                        android:layout_height="102dp"
+                        android:alpha="0.65"
+                        android:background="@drawable/bg_sos_illusion_circle2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button"
+                        android:layout_width="94dp"
+                        android:layout_height="94dp"
+                        android:contentDescription="SOS Emergency Button"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        app:backgroundTint="#FD5893"
+                        app:cornerRadius="47dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:elevation="5dp"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/button"
+                        app:layout_constraintEnd_toEndOf="@id/button"
+                        app:layout_constraintStart_toStartOf="@id/button"
+                        app:layout_constraintTop_toTopOf="@id/button">
+
+                        <TextView
+                            android:id="@+id/tvSosTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="SOS"
+                            android:textColor="#FFFFFF"
+                            android:textSize="21sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTapToAlert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="TAP TO ALERT"
+                            android:textColor="#FFFFFF"
+                            android:textSize="8sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pressHoldContainer"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_time_white"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/tvPressHold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Press &amp; Hold&#10;for 3 Seconds"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/alertContactsContainer"
+                        android:layout_width="92dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_people_white"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/tvAlertContacts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="end"
+                            android:text="Alerts will be&#10;sent to your&#10;trusted contacts"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/liveLocationContainer"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_location_white"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/tvLiveLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Live Location&#10;Will be Shared"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reachFasterContainer"
+                        android:layout_width="88dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_shield_tick_white"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/tvReachFaster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Help will reach&#10;you faster"
+                            android:textColor="#FFFFFF"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ===================================================== -->
+            <!-- DECORATION BEHIND QUICK ACCESS -->
+            <!-- ===================================================== -->
+
+            <View
+                android:id="@+id/bgRingQuickAccess"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="-50dp"
+                android:layout_marginTop="25dp"
+                android:alpha="0.25"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sosCardContainer" />
+
+            <View
+                android:id="@+id/bgBlobQuickAccess"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="-75dp"
+                android:layout_marginTop="130dp"
+                android:alpha="0.35"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sosCardContainer" />
+
+
+            <!-- ===================================================== -->
+            <!-- QUICK ACCESS TITLE -->
+            <!-- ===================================================== -->
+
+            <TextView
+                android:id="@+id/tvQuickAccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Quick Access"
+                android:textColor="#2D2B52"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sosCardContainer" />
+
+
+            <!-- ===================================================== -->
+            <!-- QUICK ACCESS GRID -->
+            <!-- ===================================================== -->
+
+            <GridLayout
+                android:id="@+id/gridQuickAccess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="12dp"
+                android:columnCount="2"
+                android:rowCount="4"
+                android:useDefaultMargins="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvQuickAccess">
+
+
+                <!-- LIVE LOCATION -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLiveLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F8BBD0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_location_white"
+                            app:tint="#E91E63" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Live Location"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Share real-time location"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- TRUSTED CONTACTS -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardTrustedContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F2C5DA"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_people_white"
+                            app:tint="#D84E86" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Trusted Contacts"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Manage your circle"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- SAFE ZONE -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSafeZone"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F5C7D9"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_shield_tick_white"
+                            app:tint="#C94A7D" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Safe Zone"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Set your safe places"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- FAKE CALL -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFakeCall"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F5C7D9"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="#E4588C" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Fake Call"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Get a fake call to escape"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- SAFETY TIPS -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSafetyTips"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F8BBD0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_menu_help"
+                            app:tint="#E91E63" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Safety Tips"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Learn &amp; stay prepared"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- REPORT INCIDENT -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardReportIncident"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F6C6D8"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/stat_sys_warning"
+                            app:tint="#E95A7D" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Report Incident"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Report &amp; help others"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- EMERGENCY SERVICES -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardEmergencyServices"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F1C2D5"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_notifications"
+                            app:tint="#D84E86" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Emergency Services"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Police, Ambulance, Fire"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- VOICE SOS -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardVoiceSos"
+                    android:layout_width="0dp"
+                    android:layout_height="118dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/card_pop"
+                    app:cardBackgroundColor="#FFFCFD"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#F8BBD0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@android:drawable/ic_btn_speak_now"
+                            app:tint="#E91E63" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:text="Voice SOS"
+                            android:textColor="#2D2B52"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Say &quot;Help&quot; for SOS"
+                            android:textColor="#7A7893"
+                            android:textSize="9sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+
+            <!-- ===================================================== -->
+            <!-- BOTTOM DECORATIVE PATTERNS -->
+            <!-- ===================================================== -->
+
+            <View
+                android:id="@+id/bgBottomBlob"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="-95dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.45"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gridQuickAccess" />
+
+            <View
+                android:id="@+id/bgBottomRing"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="-25dp"
+                android:alpha="0.35"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gridQuickAccess" />
+
+            <View
+                android:id="@+id/bgBottomDot1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="55dp"
+                android:alpha="0.45"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gridQuickAccess" />
+
+            <View
+                android:id="@+id/bgBottomDot2"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="72dp"
+                android:alpha="0.35"
+                android:background="@drawable/bg_main_pink_pattern"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gridQuickAccess" />
+
+
+            <!-- ===================================================== -->
+            <!-- SAFETY BANNER -->
+            <!-- ===================================================== -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/safetyBanner"
+                android:layout_width="0dp"
+                android:layout_height="145dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="#F7D9E8"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gridQuickAccess"
+                app:strokeColor="#F2BED5"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+
+                    <!-- ================================================= -->
+                    <!-- FEMALE SKETCH -->
+                    <!-- LEFTMOST + BOTTOMMOST -->
+                    <!-- ================================================= -->
+
+                    <!-- ================================================= -->
+                    <!-- TEXT -->
+                    <!-- ================================================= -->
+
+
+
+                    <ImageView
+                        android:id="@+id/femaleSketch"
+                        android:layout_width="159dp"
+                        android:layout_height="147dp"
+                        android:layout_marginStart="-4dp"
+                        android:layout_marginBottom="0dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="Female illustration"
+                        android:elevation="1dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/female_profile_sketch"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llTextContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="125dp"
+                        android:layout_marginEnd="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:elevation="2dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btnKnowMore"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You are never alone."
+                            android:textColor="#2D1552"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="1dp"
+                            android:text="We are here to keep you safe, strong and fearless."
+                            android:textColor="#4A3E65"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- KNOW MORE BUTTON -->
+                    <!-- ================================================= -->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnKnowMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#E0167F"
+                        android:elevation="4dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Know More >"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- ========================================================= -->
+    <!-- GESTURE OVERLAY -->
+    <!-- ========================================================= -->
+
+    <com.sheshield.app.GestureOverlayView
+        android:id="@+id/gestureOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:elevation="10dp"
+        android:focusable="false" />
+
+
+    <!-- ========================================================= -->
+    <!-- SIDE NAVIGATION DRAWER -->
+    <!-- ========================================================= -->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/bg_main_pink_pattern"
+        android:fitsSystemWindows="true"
+        app:itemIconTint="#1A1C1E"
+        app:itemTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:itemTextColor="#1A1C1E"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

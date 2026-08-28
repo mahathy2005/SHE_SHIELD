@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_trusted_contacts" type="id" />
+    <item name="nav_live_location" type="id" />
+    <item name="nav_safe_zones" type="id" />
+    <item name="nav_incident_history" type="id" />
+    <item name="nav_safety_tips" type="id" />
+    <item name="nav_fake_call" type="id" />
+</resources>

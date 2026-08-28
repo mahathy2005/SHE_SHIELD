@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Normal screen background (adjust to match your design) -->
+    <color name="bg_normal">#FFFFFF</color>
+    <color name="safe_zone_chip_background">#FCE4EC</color>
+    <color name="bg_sos_alert">#FFFFCDD2</color>
+</resources>

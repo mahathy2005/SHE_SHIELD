@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="220dp"
+    android:viewportWidth="180"
+    android:viewportHeight="220">
+
+    <!-- Hair - back -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M54,72
+            C54,42 72,23 91,23
+            C116,23 132,43 132,72
+            L132,112
+            C132,132 119,145 91,145
+            C65,145 49,130 49,108
+            Z" />
+
+    <!-- Neck -->
+    <path
+        android:fillColor="#F2B49C"
+        android:pathData="M76,125
+            L76,148
+            C76,158 84,164 91,164
+            C99,164 106,158 106,148
+            L106,125 Z" />
+
+    <!-- Face -->
+    <path
+        android:fillColor="#FFD0BC"
+        android:pathData="M61,68
+            C61,48 74,38 91,38
+            C110,38 122,51 122,70
+            L122,99
+            C122,119 109,133 91,133
+            C73,133 61,119 61,99 Z" />
+
+    <!-- Hair front -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M57,73
+            C55,49 70,27 91,27
+            C114,27 129,45 126,69
+            C117,58 108,53 98,52
+            C87,51 76,55 68,65
+            C65,68 61,71 57,73 Z" />
+
+    <!-- Left hair strand -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M58,67
+            C47,78 48,107 57,122
+            C62,130 67,134 72,137
+            L72,113
+            C65,104 64,91 64,78 Z" />
+
+    <!-- Right hair strand -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M122,64
+            C134,78 134,105 126,121
+            C122,129 116,134 111,137
+            L111,112
+            C118,103 119,89 116,77 Z" />
+
+    <!-- Left eyebrow -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M69,77
+            C74,73 80,73 84,76
+            L83,80
+            C78,78 73,78 69,81 Z" />
+
+    <!-- Right eyebrow -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M98,76
+            C103,73 109,73 114,77
+            L114,81
+            C109,78 104,78 99,80 Z" />
+
+    <!-- Left eye -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M70,86
+            C74,82 80,82 84,86
+            C80,91 74,91 70,86 Z" />
+
+    <!-- Right eye -->
+    <path
+        android:fillColor="#3A2147"
+        android:pathData="M98,86
+            C102,82 108,82 112,86
+            C108,91 102,91 98,86 Z" />
+
+    <!-- Nose -->
+    <path
+        android:fillColor="#D98F7C"
+        android:pathData="M91,87
+            C89,96 88,101 91,103
+            C93,104 95,103 96,101
+            L93,100
+            C92,99 92,96 93,92 Z" />
+
+    <!-- Smile -->
+    <path
+        android:fillColor="#C65C76"
+        android:pathData="M82,110
+            C88,115 95,115 101,110
+            C98,119 86,119 82,110 Z" />
+
+    <!-- Earrings -->
+    <path
+        android:fillColor="#FB5792"
+        android:pathData="M59,91
+            C55,91 53,95 55,99
+            C57,102 61,100 61,96
+            C61,94 60,92 59,91 Z" />
+
+    <path
+        android:fillColor="#FB5792"
+        android:pathData="M123,91
+            C127,91 129,95 127,99
+            C125,102 121,100 121,96
+            C121,94 122,92 123,91 Z" />
+
+    <!-- Shoulder / body -->
+    <path
+        android:fillColor="#FB5792"
+        android:pathData="M76,151
+            C65,153 53,158 46,169
+            C38,182 34,201 32,220
+            L148,220
+            C146,201 142,182 134,169
+            C127,158 116,153 106,151
+            C101,160 96,165 91,165
+            C85,165 80,160 76,151 Z" />
+
+    <!-- Shirt neckline -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,151
+            C80,160 85,166 91,166
+            C97,166 102,160 107,151
+            L103,148
+            C99,156 95,160 91,160
+            C86,160 82,156 78,148 Z" />
+
+    <!-- Small heart -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M91,184
+            C86,178 77,182 78,188
+            C79,194 86,198 91,202
+            C96,198 103,194 104,188
+            C105,182 96,178 91,184 Z" />
+
+</vector>
