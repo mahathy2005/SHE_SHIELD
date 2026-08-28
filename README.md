@@ -1,4 +1,3 @@
-@"
 # SheShield - Women Safety Application
 
 SheShield is an Android-based women safety application designed to provide quick access to emergency and personal safety features.
